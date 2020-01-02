@@ -23,8 +23,6 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-
-        Log.d(TAG, "BaseActivity: onCreate: ");
         super.onCreate(savedInstanceState);
         thread = new Thread(new Runnable() {
             @Override
@@ -44,20 +42,17 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        Log.d(TAG, "BaseActivity: onResume: ");
         super.onResume();
         addActivity(this);
     }
 
     @Override
     protected void onPause() {
-        Log.d(TAG, "BaseActivity: onPause: ");
         super.onPause();
     }
 
     @Override
     protected void onStop() {
-        Log.d(TAG, "BaseActivity: onStop: ");
         super.onStop();
         removeActivity(this);
         if (activities.isEmpty()){
@@ -67,7 +62,6 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        Log.d(TAG, "BaseActivity: onDestroy: ");
         super.onDestroy();
     }
 

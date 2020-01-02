@@ -31,6 +31,7 @@ public class MainActivity extends BaseActivity {
         data.setLifecycleOwner(this);
         data.setVm(vm);
         editText = findViewById(R.id.editText3);
+
     }
     @Override
     protected void onStart() {

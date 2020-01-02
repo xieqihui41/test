@@ -2,6 +2,7 @@ package com.iauto.test.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,7 +20,9 @@ public class SecondActivity extends BaseActivity {
         Log.d(TAG, "onCreate: data"+data);
     }
     public void action1(View view){
-
+        Log.d(TAG, "SecondActivity: action1: ");
+        Intent intent = new Intent(this,ThirdActivity.class);
+        startActivity(intent);
     }
     public void dialogOpen(View view){
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);

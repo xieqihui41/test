@@ -1,6 +1,8 @@
 package com.iauto.test.activity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.WindowManager;
 
 import com.iauto.test.R;
 import com.iauto.test.activity.Base.BaseActivity;

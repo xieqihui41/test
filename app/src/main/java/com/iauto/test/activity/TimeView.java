@@ -64,6 +64,12 @@ public class TimeView extends BaseActivity {
         super.onStop();
     }
 
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "TimeView: onDestroy: ");
+        super.onDestroy();
+    }
+
     public void onClick(View v){
         Log.d(TAG, "TimeView: onClick: onclick");
         ((ImageButton)v).setImageResource(R.drawable.earth);
