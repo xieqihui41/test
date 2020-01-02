@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="add">add name</string>
+    <string name="retrieve">retrieve name</string>
+    <string name="content">Content Provider</string>
+    <string name="grade">Grade</string>
+</resources>
