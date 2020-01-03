@@ -1,4 +1,4 @@
-package com.iauto.uibase;
+package com.iauto.test.uibase;
 
 import android.app.Activity;
 import android.content.Context;
