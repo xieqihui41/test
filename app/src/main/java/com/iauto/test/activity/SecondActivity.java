@@ -10,9 +10,12 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.iauto.test.R;
 import com.iauto.test.activity.Base.BaseActivity;
 import com.iauto.test.uibase.FruitAdater;
+import com.iauto.test.uibase.RecyclerFruit;
 import com.iauto.test.uibase.def.Fruit;
 
 import java.util.ArrayList;
@@ -36,9 +39,12 @@ public class SecondActivity extends BaseActivity {
             fruitsList.add(new Fruit(listData[i],R.drawable.fruit));
         }
         FruitAdater adater = new FruitAdater(this,R.layout.fruit_item,fruitsList);
+        RecyclerFruit recyclerFruit = new RecyclerFruit();
         adater.insert(new Fruit("dudu",R.drawable.fruit),0);
         ListView listView = findViewById(R.id.list_view);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
         listView.setAdapter(adater);
+        recyclerView.setAdapter(recyclerFruit);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
